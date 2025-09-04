@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curicaca - Ave Brasileira</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbX8ABcQkaehhSUHnUJs1z79yDU9pcs241vQ&s" alt="Foto da logo do mercado">
+    <p>O Mercado que ganhou contra o processo da nãointendo</p>
+  </header>
+
+  <main>
+    <section class="Produtos">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbX8ABcQkaehhSUHnUJs1z79yDU9pcs241vQ&s" alt="Foto de uma Curicaca">
+      <div>
+        <h2>Super Mario</h2>
+        <p>A curicaca (<em>Theristicus caudatus</em>) é uma ave muito comum no sul do Brasil, conhecida pelo seu canto alto e estridente. Vive em campos abertos e áreas próximas a cidades.</p>
+      </div>
+    </section>
+
+    <section class="curiosidades">
+      <h2>Curiosidades</h2>
+      <button id="mais"><a href="/saibamais">
+        SAIBA MAIS
+      </a>
+    </button>
+      <p id="curiosidadeTexto"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Site simples sobre a Curicaca 🪶 | Feito em HTML, CSS e JS</p>
+    <h2>Lista de Avaliações</h2>
+    <button onclick="listarAvaliacao()">Listar Avaliações</button>
+    <ul id="lista-avaliacao"></ul>
+
+    <h2>Adicionar Avaliação</h2>
+    <input id="avaliacao" placeholder="Insira sua avaliação">
+    <button onclick="adicionarAvaliacao()">Adicionar</button>
+
+    <h2>Atualizar Avaliação</h2>
+    <input id="id-update" placeholder="ID">
+    <input id="desc-update" placeholder="Nova avaliação">
+    <button onclick="atualizarAvaliacao()">Atualizar</button>
+
+    <h2>Remover Avaliação</h2>
+    <input id="id-delete" placeholder="ID">
+    <button onclick="deletarAvaliacao()">Remover</button>
+  </footer>
+
+  <script src="scriptAvaliacoes.js"></script>
+</body>
+</html>
