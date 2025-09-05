@@ -3,54 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curicaca - Ave Brasileira</title>
+  <title>Mercadinho Popular</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Cabeçalho -->
   <header>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbX8ABcQkaehhSUHnUJs1z79yDU9pcs241vQ&s" alt="Foto da logo do mercado">
-    <p>O Mercado que ganhou contra o processo da nãointendo</p>
+    <h1>Mercadinho Popular</h1>
+    <p>Qualidade e preço baixo todo dia!</p>
   </header>
 
-  <main>
-    <section class="Produtos">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbX8ABcQkaehhSUHnUJs1z79yDU9pcs241vQ&s" alt="Foto de uma Curicaca">
-      <div>
-        <h2>Super Mario</h2>
-        <p>A curicaca (<em>Theristicus caudatus</em>) é uma ave muito comum no sul do Brasil, conhecida pelo seu canto alto e estridente. Vive em campos abertos e áreas próximas a cidades.</p>
-      </div>
-    </section>
+  <!-- Menu de navegação -->
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Produtos</a>
+    <a href="#">Estoque</a>
+    <a href="#">Contato</a>
+  </nav>
 
-    <section class="curiosidades">
-      <h2>Curiosidades</h2>
-      <button id="mais"><a href="/saibamais">
-        SAIBA MAIS
-      </a>
-    </button>
-      <p id="curiosidadeTexto"></p>
-    </section>
+  <!-- Conteúdo principal -->
+  <main>
+    <h2>Produtos em Destaque</h2>
+    <div class="produtos">
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/fresh-vegetables-basket_144627-14748.jpg" alt="Cesta de Legumes">
+        <h3>Cesta de Legumes</h3>
+        <p>R$ 35,00</p>
+        <button>Adicionar ao Carrinho</button>
+      </div>
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/bananas-basket_144627-21044.jpg" alt="Banana">
+        <h3>Banana (kg)</h3>
+        <p>R$ 6,50</p>
+        <button>Adicionar ao Carrinho</button>
+      </div>
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/bottle-milk_144627-14811.jpg" alt="Leite">
+        <h3>Leite Integral</h3>
+        <p>R$ 4,20</p>
+        <button>Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <h2>Estoque</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Produto</th>
+          <th>Categoria</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Arroz 5kg</td>
+          <td>Alimentos</td>
+          <td>R$ 25,00</td>
+          <td>15</td>
+          <td>
+            <button class="btn btn-edit">Editar</button>
+            <button class="btn btn-delete">Deletar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Detergente</td>
+          <td>Limpeza</td>
+          <td>R$ 3,50</td>
+          <td>40</td>
+          <td>
+            <button class="btn btn-edit">Editar</button>
+            <button class="btn btn-delete">Deletar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Adicionar Novo Produto</h2>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="categoria">Categoria:</label>
+      <select id="categoria" name="categoria">
+        <option>Alimentos</option>
+        <option>Bebidas</option>
+        <option>Limpeza</option>
+        <option>Higiene</option>
+      </select>
+
+      <label for="preco">Preço:</label>
+      <input type="number" id="preco" name="preco" step="0.01" required>
+
+      <label for="quantidade">Quantidade:</label>
+      <input type="number" id="quantidade" name="quantidade" required>
+
+      <button type="submit" class="btn btn-add">Adicionar Produto</button>
+    </form>
   </main>
 
+  <!-- Rodapé -->
   <footer>
-    <p>Site simples sobre a Curicaca 🪶 | Feito em HTML, CSS e JS</p>
-    <h2>Lista de Avaliações</h2>
-    <button onclick="listarAvaliacao()">Listar Avaliações</button>
-    <ul id="lista-avaliacao"></ul>
-
-    <h2>Adicionar Avaliação</h2>
-    <input id="avaliacao" placeholder="Insira sua avaliação">
-    <button onclick="adicionarAvaliacao()">Adicionar</button>
-
-    <h2>Atualizar Avaliação</h2>
-    <input id="id-update" placeholder="ID">
-    <input id="desc-update" placeholder="Nova avaliação">
-    <button onclick="atualizarAvaliacao()">Atualizar</button>
-
-    <h2>Remover Avaliação</h2>
-    <input id="id-delete" placeholder="ID">
-    <button onclick="deletarAvaliacao()">Remover</button>
+    <p>&copy; 2025 Mercadinho Popular | Desenvolvido para gestão de produtos</p>
   </footer>
-
-  <script src="scriptAvaliacoes.js"></script>
 </body>
 </html>
